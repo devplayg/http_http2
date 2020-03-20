@@ -10,10 +10,12 @@
 <body class="bg-dark text-white">
 
 <h1>Hello HTTP</h1>
-<div class="row">
-    {{range $idx, $element := .arr}}
-    <div class="col"><img src="/static/gopher.png?{{$.ts}}_{{$idx}}"></div>
-    {{end}}
+<div class="container-fluid">
+    <div class="row">
+        {{range $idx, $element := .arr}}
+        <div class="col-4"><img src="/static/gopher.png?{{$.ts}}_{{$idx}}"></div>
+        {{end}}
+    </div>
 </div>
 <script src="/static/jquery-3.4.1.slim.min.js?{{.ts}}_1"></script>
 <script src="/static/popper.min.js?{{.ts}}_2"></script>

@@ -10,7 +10,7 @@ import (
 func Response(w http.ResponseWriter) {
 	vars := map[string]interface{}{
 		"ts":  time.Now().UnixNano(),
-		"arr": make([]int, 60),
+		"arr": make([]int, 9),
 	}
 
 	html, _ := ioutil.ReadFile("../index.html")
