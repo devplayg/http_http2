@@ -11,13 +11,9 @@ var (
 	addr = flag.String("addr", ":8000", "Listen address")
 )
 
-const (
-	staticDir = "/static/"
-)
-
 func main() {
 	flag.Parse()
-	http.Handle(staticDir, http.StripPrefix(staticDir, http.FileServer(http.Dir("../static"))))
+	http.Handle(http_http2.StaticDir, http.StripPrefix(http_http2.StaticDir, http.FileServer(http.Dir("../static"))))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		pusher, ok := w.(http.Pusher)
