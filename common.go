@@ -8,6 +8,7 @@ const (
 const HTML = `<!doctype html>
 <html lang="en">
 <head>
+    <link href="/static/favicon.svg" rel="icon"  type="image/x-icon"/>
     <link rel="stylesheet" href="/static/bootstrap.min.css">
     <style>
         img {width: 30px;}
@@ -41,5 +42,6 @@ func init() {
 		"/static/gopher004.png",
 		"/static/gopher005.png",
 		"/static/gopher006.png",
+		"/static/favicon.svg",
 	}
 }
